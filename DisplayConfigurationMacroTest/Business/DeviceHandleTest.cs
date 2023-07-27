@@ -14,7 +14,7 @@ namespace DisplayConfigurationMacroTest.Business
         [TestMethod]
         public void DeviceValidationTest()
         {
-            new DevideHandle().DeviceValidation();
+            DeviceHandle.DeviceValidation();
         }
 
     }
