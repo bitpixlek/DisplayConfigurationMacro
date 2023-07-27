@@ -1,4 +1,5 @@
-﻿using NvAPIWrapper.Native.Display.Structures;
+﻿using NvAPIWrapper.Display;
+using NvAPIWrapper.Native.Display.Structures;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,8 @@ namespace DisplayConfigurationMacro.Model.Interface
 {
     interface IDisplay
     {
-        int CurrentDigitalVibrance { get; set; }
         DisplayHandle ContextDisplay { get; set; }
+        DVCInformation _digitalVibrance { get; set; }
 
         void SetDigitalVibrance(int value);
         int GetDigitalVibrance();

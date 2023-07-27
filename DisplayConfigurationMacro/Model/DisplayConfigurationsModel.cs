@@ -11,13 +11,19 @@ namespace DisplayConfigurationMacro.Model
 {
     public class DisplayConfigurationsModel : IDisplay
     {
-        public int CurrentDigitalVibrance { get; set; }
         public DisplayHandle ContextDisplay { get; set; }
+        public DVCInformation _digitalVibrance { get; set; }
+
+        public DisplayConfigurationsModel(Display display)
+        {
+            this.ContextDisplay = display.Handle;
+            this._digitalVibrance = new DVCInformation(this.ContextDisplay);
+        }
 
         public int GetDigitalVibrance() =>
-           new DVCInformation(this.ContextDisplay).CurrentLevel;
+           _digitalVibrance.CurrentLevel;
 
         public void SetDigitalVibrance(int value) =>
-            new DVCInformation(this.ContextDisplay).CurrentLevel = value;
+            _digitalVibrance.CurrentLevel = value;
     }
 }
