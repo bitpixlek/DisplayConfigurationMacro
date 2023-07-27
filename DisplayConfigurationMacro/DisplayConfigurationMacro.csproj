@@ -85,7 +85,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\DevideHandle.cs" />
+    <Compile Include="Business\DeviceHandle.cs" />
     <Compile Include="Business\DisplayHandle.cs" />
     <Compile Include="Business\Helper\ConfigurationParametersHelper.cs" />
     <Compile Include="Business\Helper\SytemProcessHelper.cs" />

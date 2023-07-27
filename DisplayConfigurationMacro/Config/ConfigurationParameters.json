@@ -2,6 +2,13 @@
   "DefaultValue": 50,
   "CustomValue": 100,
   "PIDProcess": [
-    "csgo"
+    {
+      "ProcessName": "csgo",
+      "Priority": "RealTime"
+    },
+    {
+      "ProcessName": "valorant",
+      "Priority": "RealTime"
+    }
   ]
 }

@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using DisplayConfigurationMacro.Model.Enum;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,14 @@ namespace DisplayConfigurationMacro.Model
         public int CustomValue { get; set; }
 
         [JsonProperty(PropertyName = "PIDProcess")]
-        public List<string> PIDProcess { get; set; }
+        public List<ProcessDetails> PIDProcess { get; set; }
+    }
+
+    public class ProcessDetails
+    {
+        [JsonProperty(PropertyName = "ProcessName")]
+        public string ProcessName { get; set; }
+        [JsonProperty(PropertyName = "Priority")]
+        public ProcessPriority Priority { get; set; }
     }
 }
