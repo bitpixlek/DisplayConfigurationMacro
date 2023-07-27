@@ -1,5 +1,6 @@
 ﻿using DisplayConfigurationMacro.Business;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NvAPIWrapper.Display;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace DisplayConfigurationMacroTest.Business
         [TestMethod]
         public void DisplaySelectorTest()
         {
-            this.DisplayHandle.DisplaySelector();
+            Display display = this.DisplayHandle.DisplaySelector();
         }
     }
 }
