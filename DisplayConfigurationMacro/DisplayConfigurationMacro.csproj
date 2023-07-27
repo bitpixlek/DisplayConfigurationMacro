@@ -90,6 +90,8 @@
     <Compile Include="Business\Helper\ConfigurationParametersHelper.cs" />
     <Compile Include="Business\Helper\SytemProcessHelper.cs" />
     <Compile Include="Business\ProcessHandle.cs" />
+    <Compile Include="Business\ServiceMain.cs" />
+    <Compile Include="HeartBeat.cs" />
     <Compile Include="Model\ConfigurationParameterModel.cs" />
     <Compile Include="Model\DisplayConfigurationsModel.cs" />
     <Compile Include="Model\Enum\ProcessPriority.cs" />
