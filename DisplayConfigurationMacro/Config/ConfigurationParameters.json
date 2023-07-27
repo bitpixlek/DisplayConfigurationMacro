@@ -1,0 +1,8 @@
+{
+  "DefaultValue": 50,
+  "CustomValue": 100,
+  "PIDProcess": [
+    "Counter-Strike PID",
+    "Valorant PID"
+  ]
+}
