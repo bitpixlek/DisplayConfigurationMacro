@@ -10,12 +10,15 @@ namespace DisplayConfigurationMacro.Business.Helper
 {
     public class SytemProcessHelper
     {
-        public static bool ProcessOnListIsRunning(ConfigurationParameterModel config)
+        public static List<Process> ProcessOnListIsRunning(ConfigurationParameterModel config)
         {
             List<Process> localProcess = Process.GetProcesses().ToList<Process>();
-            List<Process> filteredProcess = localProcess.Select(x => x).Where(x => config.PIDProcess.Contains(x.ProcessName)).ToList();
-            if (filteredProcess.Count > 1) return true;
-            return false;
+            List<Process> filteredProcess = new List<Process>();
+            foreach (var targetProcess in config.PIDProcess)
+            {
+                filteredProcess.AddRange(localProcess.Select(x => x).Where(x => x.ProcessName == targetProcess.ProcessName).ToList());
+            }
+            return filteredProcess;
         }
     }
 }
