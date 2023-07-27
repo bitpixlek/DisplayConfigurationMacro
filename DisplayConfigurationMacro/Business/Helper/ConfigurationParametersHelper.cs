@@ -14,7 +14,8 @@ namespace DisplayConfigurationMacro.Business.Helper
     {
         public static ConfigurationParameterModel GetConfiguration()
         {
-            string jsonFile = string.Format("{0}{1}", Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "/Config/ConfigurationParameters.json");
+            //string jsonFile = string.Format("{0}{1}", Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), @"\Config\ConfigurationParameters.json");
+            string jsonFile = string.Format(@"E:\PersonalProjects\DisplayConfigurationMacro\DisplayConfigurationMacro\Config\ConfigurationParameters.json");
             ConfigurationParameterModel configParameter = JsonConvert.DeserializeObject<ConfigurationParameterModel>(File.ReadAllText(jsonFile));
             return configParameter;
         }
