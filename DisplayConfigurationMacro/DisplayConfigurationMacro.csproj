@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\Helper\ConfigurationParametersHelper.cs" />
+    <Compile Include="Business\Helper\SytemProcessHelper.cs" />
     <Compile Include="Model\ConfigurationParameterModel.cs" />
     <Compile Include="Model\DisplayConfigurationsModel.cs" />
     <Compile Include="Model\Interface\IDisplay.cs" />
