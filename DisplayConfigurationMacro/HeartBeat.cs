@@ -14,7 +14,7 @@ namespace DisplayConfigurationMacro
 
         public HeartBeat()
         {
-            _timer = new Timer(1000) { AutoReset = true };
+            _timer = new Timer(6000) { AutoReset = true };
             _timer.Elapsed += TimerEvent;
         }
 
